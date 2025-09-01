@@ -1,0 +1,41 @@
+/* src/components/AppSidebar.css */
+
+/* Definirea variabilelor CSS pentru teme */
+/* Culori implicite pentru modul Light (se aplică pe :root) */
+:root {
+  --sidebar-background: #ffffff; /* Fundalul sidebar-ului */
+  --sidebar-border: #e2e8f0; /* Borduri și culori pentru scrollbar */
+  --sidebar-primary: #4f46e5; /* Culori primare */
+}
+
+/* Culori pentru modul Dark (se aplică atunci când clasa .dark este pe elementul <html>) */
+.dark {
+  --sidebar-background: #111827;
+  --sidebar-border: #374151;
+  --sidebar-primary: #818cf8;
+}
+
+/* Stiluri pentru browsere bazate pe WebKit (Chrome, Safari, Edge) */
+.sidebar::-webkit-scrollbar {
+  width: 8px; /* Lățimea barei de scroll, menținută subțire */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: var(--sidebar-background); /* Fundalul barei de scroll */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: var(--sidebar-border); /* Culoarea "degetului" */
+  border-radius: 4px;
+  /* Folosim o bordură transparentă pentru a crea spațiul,
+     iar background-clip se asigură că fundalul nu include și bordura */
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Stiluri pentru Firefox */
+/* Acestea folosesc proprietățile standard pentru a stiliza scrollbar-ul */
+.sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sidebar-border) var(--sidebar-background);
+}

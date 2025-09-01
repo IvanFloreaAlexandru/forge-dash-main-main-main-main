@@ -1,0 +1,13 @@
+:root {
+  /* Culori pentru modul Light */
+  --sidebar-background: #ffffff; /* Alb */
+  --sidebar-border: #e2e8f0; /* Gri deschis */
+  --sidebar-primary: #4f46e5; /* Albastru */
+}
+
+.dark {
+  /* Culori pentru modul Dark */
+  --sidebar-background: #111827; /* Gri închis */
+  --sidebar-border: #374151; /* Gri mediu */
+  --sidebar-primary: #818cf8; /* Albastru deschis */
+}
